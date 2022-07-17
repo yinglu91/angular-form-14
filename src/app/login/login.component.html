@@ -1,0 +1,24 @@
+<mat-card class="login-page">
+  <mat-card-title>Login</mat-card-title>
+  <mat-card-content>
+    <form class="login-form data-form">
+      <mat-form-field>
+        <input matInput type="email" name="email" placeholder="Email" />
+      </mat-form-field>
+
+      <mat-form-field>
+        <input
+          matInput
+          [type]="hide ? 'password' : 'text'"
+          placeholder="Password"
+        />
+
+        <mat-icon matSuffix (click)="hide = !hide">
+          {{ hide ? "visibility_off" : "visibility" }}
+        </mat-icon>
+      </mat-form-field>
+
+      <button mat-raised-button color="primary">Login</button>
+    </form>
+  </mat-card-content>
+</mat-card>
